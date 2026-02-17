@@ -1,0 +1,214 @@
+
+# Packages
+[packages]
+
+# Required Packages
+required = [
+  "mesa",
+  "base-devel",
+  "dunst",
+  "grim",
+  "slurp",
+  "gnome-themes-extra",
+  "qt5-multimedia",
+  "qt6-multimedia",
+  "pipewire",
+  "pipewire-alsa",
+  "pipewire-audio",
+  "pipewire-jack",
+  "pipewire-pulse",
+  "zsh",
+  "networkmanager",
+  "network-manager-applet",
+  "bluez",
+  "bluez-utils",
+  "vim",
+  "neovim",
+  "btop",
+  "fastfetch",
+  "eza",
+  "ripgrep",
+  "foot",
+  "gcc",
+  "yay",
+  "nautilus",
+  "nvm",
+  "pnpm",
+  "gvfs",
+  "gvfs-mtp",
+  "noto-fonts",
+  "noto-fonts-emoji",
+  "ttf-cascadia-code-nerd",
+  "ttf-cascadia-mono-nerd",
+  "ttf-nerd-fonts-symbols",
+  "sddm",
+  "kwimy-keybind-menu",
+  "kwimy-oh-my-zsh",
+  "kwimy-astrovim",
+  "kwimy-vimix-grub",
+  "kwimy-splash",
+  "kwimy-luks",
+  "xdg-desktop-portal",
+  "xdg-desktop-portal-gtk",
+  "xdg-utils",
+  "xdg-user-dirs",
+  "polkit-gnome",
+  "gnome-keyring",
+  "gammastep",
+  "wl-clipboard",
+  "wayland",
+  "wayland-protocols",
+  "qt5-wayland",
+  "qt6-wayland",
+  "debugedit",
+  "fakeroot",
+  "jq",
+  "fd",
+  "autoconf",
+  "automake",
+  "make",
+  "cmake",
+  "tree",
+  "unzip",
+  "yazi",
+]
+
+# Compositors
+[selections]
+
+[[selections.compositors]]
+label = "Hyprland (Caelestia)"
+pacman = [
+  "hyprland",
+  "hyprpicker",
+  "hyprland-guiutils",
+  "hyprsunset",
+  "hyprutils",
+  "hyprtoolkit",
+  "xdg-desktop-portal-hyprland",
+  "caelestia-shell",
+  "caelestia-cli",
+  "caelestia-meta",
+  "libnotify",
+  "cliphist",
+  "inotify-tools",
+  "app2unit",
+  "wireplumber",
+  "trash-cli",
+  "fish",
+  "starship",
+  "adw-gtk-theme",
+  "papirus-icon-theme",
+  "qt5ct-kde",
+  "qt6ct-kde",
+  "uwsm-git",
+  "ttf-jetbrains-mono-nerd",
+]
+
+[[selections.compositors]]
+label = "Hyprland (Kwimy)"
+pacman = [
+  "hyprland",
+  "hyprlock",
+  "hyprpicker",
+  "hyprpaper",
+  "hypridle",
+  "hyprland-guiutils",
+  "hyprsunset",
+  "hyprutils",
+  "hyprtoolkit",
+  "kwimy-hypr",
+  "xdg-desktop-portal-hyprland",
+  "libnotify",
+  "app2unit",
+  "wireplumber",
+  "cliphist",
+  "adw-gtk-theme",
+  "qt5ct-kde",
+  "qt6ct-kde",
+  "uwsm-git",
+  "rofi",
+  "waybar",
+  "kitty",
+  "alacritty",
+  "fish",
+  "fisher",
+  "brightnessctl",
+  "swayosd-git",
+  "swaync-git",
+  "awww-git",
+  "matugen-git",
+  "darkly-bin",
+  "breeze-gtk",
+]
+
+# Web Browsers
+[[selections.browsers]]
+label = "Firefox"
+pacman = ["firefox", "firefox-ublock-origin"]
+
+[[selections.browsers]]
+label = "Chromium"
+pacman = ["chromium"]
+
+[[selections.browsers]]
+label = "Ungoogled Chromium"
+yay = ["ungoogled-chromium-bin"]
+
+[[selections.browsers]]
+label = "Helium"
+yay = ["helium-browser-bin"]
+
+[[selections.browsers]]
+label = "Brave"
+yay = ["brave-bin"]
+
+[[selections.browsers]]
+label = "Zen Browser"
+pacman = ["zen-browser-bin"]
+
+[[selections.browsers]]
+label = "LibreWolf"
+yay = ["librewolf-bin"]
+
+[[selections.browsers]]
+label = "Mullvad"
+yay = ["mullvad-browser-bin"]
+
+[[selections.browsers]]
+label = "qutebrowser"
+pacman = ["qutebrowser"]
+
+# Terminal Emulators
+[[selections.terminals]]
+label = "Ghostty"
+pacman = ["ghostty"]
+
+[[selections.terminals]]
+label = "Kitty"
+pacman = ["kitty"]
+
+[[selections.terminals]]
+label = "Alacritty"
+pacman = ["alacritty"]
+
+# Code Editors
+[[selections.editors]]
+label = "Zed"
+pacman = ["zed"]
+
+[[selections.editors]]
+label = "Cursor"
+yay = ["cursor-bin"]
+
+[[selections.editors]]
+label = "Visual Studio Code"
+pacman = ["visual-studio-code-bin"]
+
+[[selections.editors]]
+label = "VSCodium"
+yay = ["vscodium-bin"]
+
+[[selections.editors]]
+label = "Sublime Text 4"
+yay = ["sublime-text-4"]

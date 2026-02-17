@@ -1,0 +1,14 @@
+[package]
+name = "kwimy"
+version = "0.0.1"
+edition = "2021"
+
+[dependencies]
+serde = { version = "1", features = ["derive"] }
+toml = "0.8"
+anyhow = "1.0"
+crossterm = "0.27"
+ratatui = "0.26"
+crossbeam-channel = "0.5"
+libc = "0.2"
+dotenvy = "0.15"
