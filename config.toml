@@ -71,6 +71,7 @@ required = [
   "tree",
   "unzip",
   "yazi",
+  "pavucontrol",
 ]
 
 # Compositors
