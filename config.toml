@@ -142,6 +142,7 @@ pacman = [
   "darkly-bin",
   "breeze-gtk",
   "vesktop-bin",
+  "zlaunch-bin",
 ]
 
 # Web Browsers
