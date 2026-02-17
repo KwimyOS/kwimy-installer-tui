@@ -141,6 +141,7 @@ pacman = [
   "matugen-git",
   "darkly-bin",
   "breeze-gtk",
+  "vesktop-bin",
 ]
 
 # Web Browsers
