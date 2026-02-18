@@ -271,11 +271,11 @@ pub(crate) fn find_grub_theme_source(
 // Installs and configures the custom Kwimy SDDM theme
 pub(crate) fn install_sddm_theme(tx: &crossbeam_channel::Sender<InstallerEvent>) -> Result<()> {
     let theme_sources = [
-        "/usr/share/sddm/themes/kwimy-sddm",
-        "/run/archiso/bootmnt/airootfs/usr/share/sddm/themes/kwimy-sddm",
-        "/run/archiso/bootmnt/usr/share/sddm/themes/kwimy-sddm",
+        "/usr/share/sddm/themes/kwimy-pixie-sddm",
+        "/run/archiso/bootmnt/airootfs/usr/share/sddm/themes/kwimy-pixie-sddm",
+        "/run/archiso/bootmnt/usr/share/sddm/themes/kwimy-pixie-sddm",
     ];
-    let theme_dest = "/mnt/usr/share/sddm/themes/kwimy-sddm";
+    let theme_dest = "/mnt/usr/share/sddm/themes/kwimy-pixie-sddm";
 
     let mut found = None;
     for source in &theme_sources {
@@ -299,7 +299,7 @@ pub(crate) fn install_sddm_theme(tx: &crossbeam_channel::Sender<InstallerEvent>)
 
     run_command(tx, "mkdir", &["-p", "/mnt/usr/share/sddm/themes"], None)?;
     run_command(tx, "cp", &["-a", theme_src, theme_dest], None)?;
-    write_file("/mnt/etc/sddm.conf", "[Theme]\nCurrent=kwimy-sddm\n")?;
+    write_file("/mnt/etc/sddm.conf", "[Theme]\nCurrent=kwimy-pixie-sddm\n")?;
     fs::create_dir_all("/mnt/etc/sddm.conf.d").context("create sddm.conf.d")?;
     write_file(
         "/mnt/etc/sddm.conf.d/virtualkbd.conf",
@@ -333,7 +333,7 @@ pub(crate) fn install_sddm_theme(tx: &crossbeam_channel::Sender<InstallerEvent>)
     write_file("/mnt/etc/sddm.conf.d/kwimy-scale.conf", &greeter_env)?;
     send_event(
         tx,
-        InstallerEvent::Log("Installed SDDM theme: kwimy-sddm".to_string()),
+        InstallerEvent::Log("Installed SDDM theme: kwimy-pixie-sddm".to_string()),
     );
 
     Ok(())
