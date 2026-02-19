@@ -73,6 +73,7 @@ required = [
   "unzip",
   "yazi",
   "pavucontrol",
+
 ]
 
 # Compositors
@@ -144,6 +145,7 @@ pacman = [
   "breeze-gtk",
   "vesktop-bin",
   "zlaunch-bin",
+  "cava",
 ]
 
 # Web Browsers
