@@ -146,6 +146,7 @@ pacman = [
   "vesktop-bin",
   "zlaunch-bin",
   "cava",
+  "papirus-icon-theme",
 ]
 
 # Web Browsers
