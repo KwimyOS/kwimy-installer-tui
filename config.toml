@@ -144,7 +144,6 @@ pacman = [
   "darkly-bin",
   "breeze-gtk",
   "vesktop-bin",
-  "zlaunch-bin",
   "cava",
   "papirus-icon-theme",
 ]
