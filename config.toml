@@ -113,6 +113,7 @@ label = "Hyprland (Kwimy)"
 pacman = [
   "hyprland",
   "hyprlock",
+  "hyprshot",
   "hyprpicker",
   "hyprpaper",
   "hypridle",
@@ -146,6 +147,7 @@ pacman = [
   "vesktop-bin",
   "cava",
   "papirus-icon-theme",
+  "satty",
 ]
 
 # Web Browsers
