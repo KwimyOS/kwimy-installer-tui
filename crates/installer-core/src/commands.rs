@@ -9,7 +9,7 @@ use std::time::Duration;
 
 use anyhow::{Context, Result};
 
-use crate::model::InstallerEvent;
+use crate::events::InstallerEvent;
 
 use super::{send_event, TMP_INSTALLER_LOG};
 

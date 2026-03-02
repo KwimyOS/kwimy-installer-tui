@@ -12,3 +12,4 @@ ratatui = "0.26"
 crossbeam-channel = "0.5"
 libc = "0.2"
 dotenvy = "0.15"
+installer-core = { path = "crates/installer-core" }

@@ -6,7 +6,7 @@ use std::time::Duration;
 
 use anyhow::{Context, Result};
 
-use crate::model::InstallerEvent;
+use crate::events::InstallerEvent;
 use crate::monitors::render_hypr_monitors_conf;
 
 use super::commands::{run_chroot, run_command, run_command_capture};
@@ -81,7 +81,10 @@ pub(crate) fn install_kwimy_hypr(
 
     send_event(
         tx,
-        InstallerEvent::Log(format!("Installing Kwimy Hyprland defaults from {}...", script)),
+        InstallerEvent::Log(format!(
+            "Installing Kwimy Hyprland defaults from {}...",
+            script
+        )),
     );
     run_command(tx, "bash", &[script, "/mnt", username], None)?;
     Ok(())
@@ -340,7 +343,8 @@ pub(crate) fn schedule_kwimy_init(
     let hypr_include_home = "~/.local/share/kwimy/hypr/kwimy-init.conf";
     let hypr_main = format!("{}/.config/hypr/hyprland.conf", home_dir);
     let hypr_source_line = format!("source = {}", hypr_include_home);
-    let hypr_exec_line = "exec-once = /bin/bash -lc \"$HOME/.local/share/kwimy/post-install/run-kwimy-init.sh\"";
+    let hypr_exec_line =
+        "exec-once = /bin/bash -lc \"$HOME/.local/share/kwimy/post-install/run-kwimy-init.sh\"";
 
     fs::create_dir_all(&autostart_dir).context("create autostart dir")?;
     fs::create_dir_all(&script_dir).context("create kwimy init script dir")?;
@@ -433,7 +437,8 @@ pub(crate) fn schedule_caelestia_init(
     let hypr_include_home = "~/.local/share/kwimy/hypr/caelestia-init.conf";
     let hypr_main = format!("{}/.config/hypr/hyprland.conf", home_dir);
     let hypr_source_line = format!("source = {}", hypr_include_home);
-    let hypr_exec_line = "exec-once = /bin/bash -lc \"$HOME/.local/share/kwimy/post-install/run-caelestia-init.sh\"";
+    let hypr_exec_line =
+        "exec-once = /bin/bash -lc \"$HOME/.local/share/kwimy/post-install/run-caelestia-init.sh\"";
 
     fs::create_dir_all(&autostart_dir).context("create autostart dir")?;
     fs::create_dir_all(&script_dir).context("create caelestia init script dir")?;

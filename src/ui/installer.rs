@@ -19,13 +19,13 @@ pub fn draw_ui(area: Rect, f: &mut Frame<'_>, app: &App) {
         .margin(0)
         .constraints([
             Constraint::Length(KWIMY_ART.len() as u16), // ASCII art
-            Constraint::Length(1),                       // Spacer
-            Constraint::Length(1),                       // Title
-            Constraint::Length(1),                       // Progress bar
-            Constraint::Length(1),                       // Spacer
+            Constraint::Length(1),                      // Spacer
+            Constraint::Length(1),                      // Title
+            Constraint::Length(1),                      // Progress bar
+            Constraint::Length(1),                      // Spacer
             Constraint::Length(app.steps.len() as u16 + 3), // Installation steps
-            Constraint::Min(4),                          // Logs
-            Constraint::Length(1),                       // Final status
+            Constraint::Min(4),                         // Logs
+            Constraint::Length(1),                      // Final status
         ])
         .split(area);
 

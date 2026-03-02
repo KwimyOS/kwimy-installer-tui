@@ -2,9 +2,13 @@
 /// Installation process
 ////////
 mod commands;
+mod monitors;
 mod pacman;
 mod system;
 mod themes;
+
+pub mod disk;
+pub mod events;
 
 use std::fs::{self, OpenOptions};
 use std::io::Write;
@@ -12,8 +16,8 @@ use std::path::Path;
 
 use anyhow::{Context, Result};
 
-use crate::disks::DiskInfo;
-use crate::model::{InstallerEvent, StepStatus};
+use crate::disk::DiskInfo;
+use crate::events::{InstallerEvent, StepStatus};
 
 use commands::{append_temp_installer_log, run_chroot, run_command, run_command_capture};
 use pacman::{

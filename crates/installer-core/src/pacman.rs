@@ -5,7 +5,7 @@ use std::process::{Command, Stdio};
 
 use anyhow::{Context, Result};
 
-use crate::model::InstallerEvent;
+use crate::events::InstallerEvent;
 
 use super::commands::{run_chroot, run_chroot_stream, run_command, run_command_stream};
 use super::system::write_file;
@@ -259,10 +259,7 @@ pub(crate) fn import_kwimy_repo_key(tx: &crossbeam_channel::Sender<InstallerEven
     run_command(
         tx,
         "cp",
-        &[
-            KWIMY_REPO_KEY_PATH,
-            "/mnt/usr/share/kwimy/kwimy-repo.gpg",
-        ],
+        &[KWIMY_REPO_KEY_PATH, "/mnt/usr/share/kwimy/kwimy-repo.gpg"],
         None,
     )?;
     run_chroot(

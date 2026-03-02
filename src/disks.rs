@@ -36,6 +36,16 @@ impl DiskInfo {
     }
 }
 
+impl From<DiskInfo> for installer_core::disk::DiskInfo {
+    fn from(value: DiskInfo) -> Self {
+        Self {
+            name: value.name,
+            size: value.size,
+            model: value.model,
+        }
+    }
+}
+
 pub fn list_disks() -> Result<Vec<DiskInfo>> {
     let output = Command::new("lsblk")
         .args(["-dn", "-P", "-o", "NAME,SIZE,TYPE,MODEL"])
